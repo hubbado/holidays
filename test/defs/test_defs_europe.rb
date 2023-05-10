@@ -595,6 +595,8 @@ class EuropeDefinitionTests < Test::Unit::TestCase  # :nodoc:
 
     assert_equal "Bank Holiday", (Holidays.on(Date.civil(2023, 5, 29), [:gb])[0] || {})[:name]
 
+    assert_equal "Bank holiday for the coronation of King Charles III", (Holidays.on(Date.civil(2023, 5, 8), [:gb])[0] || {})[:name]
+
     assert_equal "Nova godina", (Holidays.on(Date.civil(2012, 1, 1), [:hr], [:informal])[0] || {})[:name]
 
     assert_equal "Bogojavljenje ili Sveta tri kralja", (Holidays.on(Date.civil(2012, 1, 6), [:hr], [:informal])[0] || {})[:name]
